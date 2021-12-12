@@ -1,3 +1,13 @@
 ## Singleton Design Pattern Motivation
-
+- For some components it only makes sense to have one in the system at any given time
+  - Ex. Database repository
+  - Object Factory(Stateless Factory)
+- Construction calls could be expensive(ex. DB)
+  - We only do it once
+  - We give everyone the same instance
+- Want to prevent anyone from creating additional copies
+- We need to take care of lazy instantiation
+- `Singleton` - a component which is instantiated only once.
+- Problems:
+  - Quite often breaks the dependency inversion principle of SOLID.
 ---
