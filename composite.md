@@ -1,0 +1,3 @@
+## Composite Design Pattern Motivation
+
+---

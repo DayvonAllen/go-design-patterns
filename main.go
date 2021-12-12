@@ -1,10 +1,10 @@
 package main
 
 import (
-	"com.example/app/adpater"
-	"com.example/app/builder"
-	"com.example/app/factory"
-	"com.example/app/prototype"
+	"design/adpater"
+	"design/builder"
+	"design/factory"
+	"design/prototype"
 	"fmt"
 )
 
@@ -30,13 +30,13 @@ func customPersonBuilderExample() {
 	pb := builder.NewPersonBuilder()
 	pb.
 		Lives().
-			At("145 S. St.").
-			In("Houston").
-			WithPostCode("34627").
+		At("145 S. St.").
+		In("Houston").
+		WithPostCode("34627").
 		Works().
-			For("Google").
-			As("Programmer").
-			Makes(120000)
+		For("Google").
+		As("Programmer").
+		Makes(120000)
 
 	newPerson := pb.Build()
 
@@ -79,25 +79,24 @@ func customStructuredFactory() {
 // prototypes require the ability to make deep copy of objects, types and structs
 func naivePrototypeDeepCopyImpl() {
 	john := prototype.Person{Name: "John",
-		Address:     &prototype.Address{StreetAddress: "321 1st St.", City: "Houston", Country: "USA"},
-			Friends: []string{"Chris", "Matt"},
-		}
+		Address: &prototype.Address{StreetAddress: "321 1st St.", City: "Houston", Country: "USA"},
+		Friends: []string{"Chris", "Matt"},
+	}
 
-		// gives jane a copy of everything in john
-		jane := john.NaiveDeepCopy()
-		jane.Name = "Jane"
-		jane.Address = &prototype.Address{StreetAddress: "451 2nd St.", City: "Miami", Country: "USA"}
-		jane.Friends = []string{"Beth", "Sarah"}
+	// gives jane a copy of everything in john
+	jane := john.NaiveDeepCopy()
+	jane.Name = "Jane"
+	jane.Address = &prototype.Address{StreetAddress: "451 2nd St.", City: "Miami", Country: "USA"}
+	jane.Friends = []string{"Beth", "Sarah"}
 
-		fmt.Printf("Name: %s, Address: %v, Friends: %v\n", john.Name, john.Address, john.Friends)
-		fmt.Printf("Name: %s, Address: %v, Friends: %v\n", jane.Name, jane.Address, jane.Friends)
+	fmt.Printf("Name: %s, Address: %v, Friends: %v\n", john.Name, john.Address, john.Friends)
+	fmt.Printf("Name: %s, Address: %v, Friends: %v\n", jane.Name, jane.Address, jane.Friends)
 }
-
 
 // prototypes require the ability to make deep copy of objects, types and structs
 func betterPrototypeDeepCopyImpl() {
 	john := prototype.Person{Name: "John",
-		Address:     &prototype.Address{StreetAddress: "321 1st St.", City: "Houston", Country: "USA"},
+		Address: &prototype.Address{StreetAddress: "321 1st St.", City: "Houston", Country: "USA"},
 		Friends: []string{"Chris", "Matt"},
 	}
 

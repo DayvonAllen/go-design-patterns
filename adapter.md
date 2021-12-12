@@ -1,0 +1,3 @@
+## Adapter Design Pattern Motivation
+
+---
