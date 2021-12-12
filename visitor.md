@@ -1,0 +1,3 @@
+## Visitor Design Pattern Motivation
+
+---

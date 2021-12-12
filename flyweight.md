@@ -1,0 +1,3 @@
+## Flyweight Design Pattern Motivation
+
+---

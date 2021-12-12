@@ -1,0 +1,3 @@
+## Mediator Design Pattern Motivation
+
+---

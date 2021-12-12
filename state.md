@@ -1,0 +1,3 @@
+## State Design Pattern Motivation
+
+---
