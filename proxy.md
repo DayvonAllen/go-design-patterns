@@ -1,3 +1,18 @@
 ## Proxy Design Pattern Motivation
-
+- An interface for accessing a particular resource
+- Provide the same interface but entirely different behavior
+- Types of proxies:
+  - logging
+  - virtual
+  - guarding
+  - communication
+- `Proxy` - A type that functions as an interface to a particular resource. That resource may be remote, expensive to construct, or may require logging or some other added functionality.
+- A proxy has the same interface as the underlying object
+- To create a proxy, simply replicate the existing interface of an object
+- Add relevant functionality to the redefined methods.
+- `Proxy` vs. `Decorator`:
+  - Proxy tries to provide an identical interface
+  - Decorator provides an enhanced interface
+  - Decorator typically aggregates(or has pointer to) what it is decorating, proxy doesn't have to
+  - Proxy might not even be working with a materialized object.
 ---

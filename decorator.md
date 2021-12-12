@@ -6,4 +6,9 @@
 - Need to be able to interact with existing structures
 - Solution: embed the decorated object and provide additional functionality
 - `Decorator Pattern` - facilitates the addition of behaviors to individual objects thorough embedding.
+- `Proxy` vs. `Decorator`:
+    - Proxy tries to provide an identical interface
+    - Decorator provides an enhanced interface
+    - Decorator typically aggregates(or has pointer to) what it is decorating, proxy doesn't have to
+    - Proxy might not even be working with a materialized object.
 ---

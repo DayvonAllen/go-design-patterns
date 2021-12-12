@@ -1,4 +1,4 @@
-package single_chain_of_responsibility
+package chain_of_responsibility
 
 import (
 	"fmt"

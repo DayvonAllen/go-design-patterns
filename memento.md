@@ -1,3 +1,15 @@
 ## Memento Design Pattern Motivation
-
+- `memento` - A token representing the system state. Lets us roll back to the state when the token was generated. May or may not directly expose state information.
+- `memento` vs `flyweight`:
+  - Both patterns provide a 'token' clients can hold on to
+  - Memento is used only to be fed back into the system:
+    - N public/mutable state
+    - no methods
+  - A flyweight is similar to an ordinary reference to an object
+    - Can mutate state
+    - can provide additional functionality(fields/methods)
+- Mementos are used to roll back state arbitrarily
+- A memento is simply a token/handle with (typically) no methods of its own.
+- Can be used to implement `undo/redo`
+- A memento is not required to expose the state(s) to which it reverts
 ---

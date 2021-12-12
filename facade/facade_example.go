@@ -1,5 +1,7 @@
 package facade
 
+import "fmt"
+
 type Buffer struct {
 	width, height int
 	buffer        []rune
@@ -42,4 +44,11 @@ func NewConsole() *Console {
 
 func (c *Console) GetCharacterAt(index int) rune {
 	return c.viewports[0].GetCharacterAt(index)
+}
+
+func CreateFacade() {
+	c := NewConsole()
+	u := c.GetCharacterAt(1)
+
+	fmt.Println(u)
 }
