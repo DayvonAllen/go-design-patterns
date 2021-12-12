@@ -1,3 +1,12 @@
 ## Bridge Design Pattern Motivation
-
+- Connecting components together through abstractions
+- Bridge prevents a `Cartesian Product` complexity explosion
+- Example:
+  - Common type ThreadScheduler
+  - Can be preemptive or cooperative
+  - Can run on Windows or Unix
+  - Naive solution to this problem:
+    - You end up with a 2x2 scenario: WindowsPTS, UnixPTS, WindowsCTS, UnixCTS
+- Bridge pattern avoids the entity explosion(above example) 
+- `Bridge` - a mechanism that decouples an interface(hierarchy) from an implementation(hierarchy)
 ---

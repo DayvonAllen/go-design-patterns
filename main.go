@@ -110,7 +110,7 @@ func main() {
 //}
 
 //func adapterExample() {
-//	rc := adpater.NewRectangle(6, 4)
-//	a := adpater.VectorToRaster(rc)
-//	fmt.Println(adpater.DrawPoints(a))
+//	rc := adapter.NewRectangle(6, 4)
+//	a := adapter.VectorToRaster(rc)
+//	fmt.Println(adapter.DrawPoints(a))
 //}
